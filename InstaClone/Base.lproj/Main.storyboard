@@ -50,7 +50,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="s.circle.fill" catalog="system" id="qk2-Fv-4Xb"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="logOut" modalPresentationStyle="fullScreen" id="C6U-pv-kvm"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="logOut" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="C6U-pv-kvm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zyG-e5-iqO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
