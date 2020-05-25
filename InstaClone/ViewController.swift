@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     
@@ -18,15 +18,26 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
     @IBAction func signInClicked(_ sender: Any) {
-        performSegue(withIdentifier: "toFeedVC", sender: nil)
+        if emailText.text != nil && passwordText.text != nil {
+            Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { (data, error) in
+                if error != nil {
+                    self.makeAlert(titleInpit: "Error", messageInput: error?.localizedDescription ?? "Error")
+                } else {
+                    self.performSegue(withIdentifier: "toFeedVC", sender: nil)
+                    
+                }
+            }
+        } else {
+            makeAlert(titleInpit: "Error", messageInput: "Username/Password missing!")
+        }
     }
     
     @IBAction func signUpClicked(_ sender: Any) {
         
         if emailText.text != "" && passwordText.text != "" {
-        
+            
             Auth.auth().createUser(withEmail: emailText.text!, password: passwordText.text!) { (data, error) in
                 
                 if error != nil {
@@ -40,6 +51,7 @@ class ViewController: UIViewController {
             makeAlert(titleInpit: "Error", messageInput: "Username/Password missing!")
         }
     }
+    
     func makeAlert(titleInpit: String, messageInput: String) {
         let alert = UIAlertController(title: titleInpit, message: messageInput, preferredStyle: UIAlertController.Style.alert)
         let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
