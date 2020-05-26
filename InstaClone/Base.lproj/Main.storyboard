@@ -14,14 +14,51 @@
                     <view key="view" contentMode="scaleToFill" id="ze1-Oh-qGa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Select" translatesAutoresizingMaskIntoConstraints="NO" id="rQL-X5-5uR">
+                                <rect key="frame" x="58" y="55" width="259" height="259"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rQL-X5-5uR" secondAttribute="height" multiplier="1:1" id="tyu-ef-BKi"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UMo-Qg-H3X">
+                                <rect key="frame" x="58" y="339" width="259" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2os-hG-24R">
+                                <rect key="frame" x="163" y="400" width="49" height="30"/>
+                                <state key="normal" title="Upload"/>
+                                <connections>
+                                    <action selector="uploadButtonClicked:" destination="uw0-qt-kRV" eventType="touchUpInside" id="Cyj-rA-CFc"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2os-hG-24R" firstAttribute="leading" secondItem="Wpk-Rf-ugb" secondAttribute="leading" constant="163" id="0W6-nQ-ELi"/>
+                            <constraint firstItem="Wpk-Rf-ugb" firstAttribute="trailing" secondItem="rQL-X5-5uR" secondAttribute="trailing" constant="58" id="1fJ-u4-zXE"/>
+                            <constraint firstItem="Wpk-Rf-ugb" firstAttribute="trailing" secondItem="UMo-Qg-H3X" secondAttribute="trailing" constant="58" id="5Pa-jt-h1j"/>
+                            <constraint firstItem="UMo-Qg-H3X" firstAttribute="leading" secondItem="Wpk-Rf-ugb" secondAttribute="leading" constant="58" id="8KG-Zw-ALo"/>
+                            <constraint firstItem="2os-hG-24R" firstAttribute="top" secondItem="UMo-Qg-H3X" secondAttribute="bottom" constant="27" id="9Nq-I9-mwf"/>
+                            <constraint firstItem="rQL-X5-5uR" firstAttribute="top" secondItem="Wpk-Rf-ugb" secondAttribute="top" constant="55" id="D4t-PM-U8X"/>
+                            <constraint firstItem="rQL-X5-5uR" firstAttribute="leading" secondItem="Wpk-Rf-ugb" secondAttribute="leading" constant="58" id="SMt-OZ-pnp"/>
+                            <constraint firstItem="UMo-Qg-H3X" firstAttribute="top" secondItem="rQL-X5-5uR" secondAttribute="bottom" constant="25" id="gMM-Tn-PaG"/>
+                            <constraint firstItem="rQL-X5-5uR" firstAttribute="centerX" secondItem="ze1-Oh-qGa" secondAttribute="centerX" id="tAT-jR-h6M"/>
+                            <constraint firstItem="Wpk-Rf-ugb" firstAttribute="trailing" secondItem="2os-hG-24R" secondAttribute="trailing" constant="163" id="yky-Ab-AzH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Wpk-Rf-ugb"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" image="u.circle.fill" catalog="system" id="eiT-dO-BQv"/>
+                    <connections>
+                        <outlet property="commentText" destination="UMo-Qg-H3X" id="q28-Ka-JHV"/>
+                        <outlet property="imageView" destination="rQL-X5-5uR" id="EeM-4g-W3G"/>
+                        <outlet property="uploadButton" destination="2os-hG-24R" id="ZDQ-9Y-WcF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B01-GD-fcV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-317" y="183"/>
+            <point key="canvasLocation" x="-317.60000000000002" y="182.15892053973016"/>
         </scene>
         <!--Settings-->
         <scene sceneID="tXd-CC-mCx">
@@ -164,6 +201,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Select" width="259" height="259"/>
         <image name="f.circle.fill" catalog="system" width="128" height="121"/>
         <image name="s.circle.fill" catalog="system" width="128" height="121"/>
         <image name="u.circle.fill" catalog="system" width="128" height="121"/>
