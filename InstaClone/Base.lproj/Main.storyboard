@@ -144,12 +144,19 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pfz-ps-SUm">
+                                                    <rect key="frame" x="298" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="spE-dT-vmT" firstAttribute="top" secondItem="ELh-YU-XeP" secondAttribute="bottom" constant="15" id="6Si-7g-Z0T"/>
                                                 <constraint firstItem="b4E-zk-YXv" firstAttribute="top" secondItem="8Hl-7a-1wT" secondAttribute="topMargin" id="7XN-ca-vbY"/>
                                                 <constraint firstItem="spE-dT-vmT" firstAttribute="leading" secondItem="8Hl-7a-1wT" secondAttribute="leadingMargin" id="8St-Xt-Wte"/>
                                                 <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="b4E-zk-YXv" secondAttribute="trailing" id="CVe-96-Ksf"/>
+                                                <constraint firstItem="Pfz-ps-SUm" firstAttribute="baseline" secondItem="b4E-zk-YXv" secondAttribute="baseline" id="Eoe-02-ONr"/>
                                                 <constraint firstItem="9T1-hs-RQg" firstAttribute="top" secondItem="b4E-zk-YXv" secondAttribute="bottom" constant="7" id="LVY-7U-C6O"/>
                                                 <constraint firstItem="ELh-YU-XeP" firstAttribute="top" secondItem="9T1-hs-RQg" secondAttribute="bottom" constant="8" id="Lwj-Ch-n5M"/>
                                                 <constraint firstItem="ELh-YU-XeP" firstAttribute="leading" secondItem="8Hl-7a-1wT" secondAttribute="leadingMargin" constant="20" id="Ngn-yN-fIA"/>
@@ -158,6 +165,7 @@
                                                 <constraint firstItem="K4a-Ow-kkP" firstAttribute="bottom" secondItem="8Hl-7a-1wT" secondAttribute="bottomMargin" constant="8" id="XQh-kO-5VE"/>
                                                 <constraint firstItem="9T1-hs-RQg" firstAttribute="leading" secondItem="8Hl-7a-1wT" secondAttribute="leadingMargin" constant="20" id="ZYT-OA-tkP"/>
                                                 <constraint firstItem="K4a-Ow-kkP" firstAttribute="trailing" secondItem="8Hl-7a-1wT" secondAttribute="trailingMargin" id="cbX-c3-HTM"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Pfz-ps-SUm" secondAttribute="trailing" constant="20" id="da1-G6-3oY"/>
                                                 <constraint firstItem="b4E-zk-YXv" firstAttribute="leading" secondItem="8Hl-7a-1wT" secondAttribute="leadingMargin" constant="20" id="hlP-wm-Ptg"/>
                                                 <constraint firstItem="K4a-Ow-kkP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="spE-dT-vmT" secondAttribute="trailing" constant="8" symbolic="YES" id="ow3-n9-tBy"/>
                                                 <constraint firstItem="b4E-zk-YXv" firstAttribute="centerX" secondItem="8Hl-7a-1wT" secondAttribute="centerX" id="tAY-RM-BMm"/>
@@ -166,6 +174,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="commentLabel" destination="ELh-YU-XeP" id="Bsx-HZ-pIe"/>
+                                            <outlet property="documentIdLabel" destination="Pfz-ps-SUm" id="cwS-ts-wl4"/>
                                             <outlet property="likeLabel" destination="K4a-Ow-kkP" id="Dev-sl-o3R"/>
                                             <outlet property="userImageView" destination="9T1-hs-RQg" id="8UU-iA-9pM"/>
                                             <outlet property="userMailLabel" destination="b4E-zk-YXv" id="Y8J-DU-Na6"/>

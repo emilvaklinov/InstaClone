@@ -10,6 +10,7 @@ import UIKit
 
 class FeedCell: UITableViewCell {
 
+    @IBOutlet weak var documentIdLabel: UILabel!
     @IBOutlet weak var userMailLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var userImageView: UIImageView!
